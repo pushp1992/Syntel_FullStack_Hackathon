@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitized Training Management</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/customStyle.css"/>
+    <link rel="stylesheet" href="css/availableCourses.css"/>
+    <link rel="stylesheet" href="css/becomeInstructor.css"/>
+    <link rel="stylesheet" href="css/trainerRegForm.css"/>
+
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript" src="script/tether.min.js"></script>
+    <script type="text/javascript" src="script/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script/angular.min.js"></script>
+
+    <script type="text/javascript" src="script/trainerRegForm.js"></script>
+
+   <!-- <script type="text/javascript" src="./script/signUpForm.js"></script> -->
+
+
+</head>
+
+<body ng-app="trainingMgmtApp" ng-controller="trainingMgmtCtrl">
+
+<!--**** Creating HEADER ie. MENU bar for the INDEX page ****-->
+<div class="fluid" id="menuBar"> <br/>
+    <div class="row">
+        <div class="col-lg-2 animated infinite pulse">
+           &nbsp;&nbsp;<label id="logoName">HackerWorld.org</label>
+        </div>
+        <div class="col-lg-2"><a href="./view/availableCourses.html"><button type="button" class="btn btn-default" id="courseBtn">Courses</button></a></div>
+        <div class="col-lg-3"><input type="search" id="searchBox" placeholder="What do you want to learn ?"/></div>
+        <div class="col-lg-2" id="instructor">
+            <button class="btn btn-info" id="bcmInstructor" data-toggle="modal" data-target="#becomeInstructor">Become instructor</button>
+        </div>
+        <div class="col-lg-1" id="cart"><img src="images/cart.png" alt="cart"/> <br/>cart</div>
+        <div class="col-lg-1"><button class="btn btn-warning" id="userLogin" data-toggle="modal" data-target="#userSignInForm">Login</button></div>
+        <div class="col-lg-1">
+           <button class="btn btn-danger" id="userSignup" data-toggle="modal" data-target="#userSignUpForm">SignUp</button>
+        </div>
+    </div>
+</div>
+
+
+
+<!--**** Creating Modal BOX for INSTRUCTOR Menu ****-->
+<!--**** Creating MODAL ****-->
+<div class="container modal fade" id="becomeInstructor" role="dialog">
+    <div class="modal-dialog">
+        <!--**** Creating MODAL Content ****-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close pull-left" data-dismiss="modal">Close</button>
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+
+                <div id="myDiv">
+                    <p class="small">Teach the world online Share your knowledge and reach millions of students across
+                        the globe.</p>
+                    <input type="submit" value="Sign UP For Free">
+                </div>
+                <div class="container" text-align="center">
+                    <h1> Discover your potential</h1>
+                    <div class="row">
+
+                        <div class="col-lg-4" width="370px" height="400px">
+                            <iframe class="courseVideo" src="https://www.youtube.com/embed/OPxeCiy0RdY" frameborder="1"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <br/> <label>Angular JS </label>
+                        </div>
+                        <div class="col-lg-4">
+                            <iframe class="courseVideo" src="https://www.youtube.com/embed/wBp0Rb-ZJak" frameborder="1"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <br/> <label>Unix </label>
+                        </div>
+                        <div class="col-lg-3">
+                            <iframe class="courseVideo" src="https://www.youtube.com/embed/aqHhpahguVY" frameborder="1"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <br/> <label>Java Technology </label>
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <iframe class="courseVideo" src="https://www.youtube.com/embed/jGrWsQ2KCV4" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <br/> <label> AWS </label>
+
+                        </div>
+                        <div class="col-lg-4">
+                            <iframe class="courseVideo" src="https://www.youtube.com/embed/0bPJPiX89K0" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <br/> <label> Azure</label>
+                        </div>
+                        <div class="col-lg-4">
+                            <iframe class="courseVideo" src="https://www.youtube.com/embed/7APZD0me1nU" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <br/> <label>Pivotal</label>
+                        </div>
+
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="acadmicourse">
+                        <h3>Academic Courses</h3>
+                    </div>
+
+                    <br>
+                    <br>
+
+
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-lg-4">
+                                <iframe class="courseVideo"
+                                        src="https://www.youtube.com/embed/7S4pfugbJR4?list=PLwYR7WJw1-QVSOT16T5p4iHmshikhsDn3"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <br/> <label>Cat Preparation Course</label>
+
+                            </div>
+                            <div class="col-lg-4">
+                                <iframe class="courseVideo" src="https://www.youtube.com/embed/n860KmQRND0"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <br/> <label>Gate Preparation Course </label>
+                            </div>
+                            <div class="col-lg-3">
+                                <iframe class="courseVideo" src="https://www.youtube.com/embed/ISk-bFTYS84"
+                                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <br/> <label>UGC NET Preparation Course </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--**** Creating Modal Box, where USER can find their SignIn ****-->
+<!--**** Creating MODAL ****-->
+<div class="container modal fade" id="userSignInForm" role="dialog">
+    <div class="modal-dialog">
+        <!--**** Creating MODAL Content ****-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">User SignIn BOX !</h3> <hr/><br/>
+                <div class="fluid">
+                    <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#trainerSignInForm">Trainer SignIn</button>
+                </div> <br/><br/><br/>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#traineeSignInForm">Trainee Registration</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--**** Creating Modal Box for TRAINER SignIn ****-->
+<!--**** Creating MODAL ****-->
+<div class="container modal fade" id="trainerSignInForm" role="dialog">
+    <div class="modal-dialog">
+        <!--**** Creating MODAL Content ****-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">Trainer SignIn Form !</h3>
+            </div>
+            <div class="container"><img src="./images/login1.png" style="align-items: center"/></div>
+            <form name="trainerSignInForm" ng-submit="" role="form" id="signInForm" novalidate>
+            <div class="form-group">
+                <label for="username">UserName:</label>
+                <input type="text" class="form-control" name="userName" id="userName"  ng-model="trainerUname" required />
+                <span ng-show="trainerSignInForm.userName.$dirty && trainerSignInForm.userName.$error.required" class="help-block">Username cannot be empty</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" name="password" id="password"  ng-model="trainerPwd" required />
+                <span ng-show="trainerSignInForm.password.$dirty && trainerSignInForm.password.$error.required" class="help-block">Enter password</span>
+            </div><br/><br/>
+            <div class="modal-footer">
+                <button type="submit" ng-model="trainerSignIn" class="btn btn-success">SignIn</button>
+                <button type="reset" class="btn btn-warning">Reset</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!--**** Creating Modal Box for TRAINEE SignIn ****-->
+<!--**** Creating MODAL ****-->
+<div class="container modal fade" id="traineeSignInForm" role="dialog">
+    <div class="modal-dialog">
+        <!--**** Creating MODAL Content ****-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">Trainee SignIn Form !</h3>
+            </div>
+            <div class="container"><img src="./images/login1.png" style="align-items: center"/></div>
+            <form name="traineeSignInForm" ng-submit="" role="form" id="traineeSignIn" novalidate>
+                    <div class="form-group">
+                        <label for="username">UserName:</label>
+                        <input type="text" class="form-control" name="userName" id="traineeUserName"  ng-model="traineeUname" required />
+                        <span ng-show="traineeSignInForm.userName.$dirty && traineeSignInForm.userName.$error.required" class="help-block">Username cannot be empty</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" name="password" id="traineePassword"  ng-model="trainerPwd" required />
+                        <span ng-show="traineeSignInForm.password.$dirty && traineeSignInForm.password.$error.required" class="help-block">Enter password</span>
+                    </div><br/><br/>
+                    <div class="modal-footer">
+                        <button type="submit" ng-model="traineeSignIn" class="btn btn-success">SignIn</button>
+                        <button type="reset" class="btn btn-warning">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--**** Creating USER REGISTRATION BOX ****-->
+<!--**** Creating MODAL ****-->
+<div class="container modal fade" id="userSignUpForm" role="dialog">
+    <div class="modal-dialog">
+        <!--**** Creating MODAL Content ****-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">User Registration BOX !</h3> <hr/><br/>
+                <div class="fluid">
+                    <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#signUpForm">Trainer Registration</button>
+                </div> <br/><br/><br/>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#traineeSignUpForm">Trainee Registration</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--**** Creating Trainer REGISTRATION FORM ****-->
+<!--**** Creating MODAL ****-->
+<div class="container modal fade" id="signUpForm" role="dialog">
+    <div class="modal-dialog">
+        <!--**** Creating MODAL Content ****-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">If you want to train others. Register Here !</h3> <hr/><br/>
+                <form name="trainerRegForm" ng-submit="" role="form" id="regForm" novalidate>
+                    <div class="form-group">
+                        <label for="username">First Name:</label>
+                        <input type="text" class="form-control" name="firstName" id="firstName"  ng-model="firstName" required />
+                        <span ng-show="trainerRegForm.firstName.$dirty && trainerRegForm.firstName.$error.required" class="help-block">First Name should not be blank</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Last Name:</label>
+                        <input type="text" class="form-control" name="lastName" id="lastName"  ng-model="lastName" required />
+                        <span ng-show="trainerRegForm.lastName.$dirty && trainerRegForm.lastName.$error.required" class="help-block">Last Name should not be blank</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <input type="radio" ng-model="gender" name="male" value="male" />Male
+                        <input type="radio" ng-model="gender" name="female" value="female" />Female
+                        <span ng-show="trainerRegForm.age.$dirty && trainerRegForm.age.$error.required" class="help-block">Gender required</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" name="age" id="age" ng-model="age" required />
+                        <span ng-show="trainerRegForm.age.$dirty && trainerRegForm.age.$error.required" class="help-block">Enter your Age</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="nationality">Nationality:</label>
+                        <select class="form-control" id="nationality" name="nationality" ng-model="nationality" ng-options="cntry for cntry in countries" required> </select>
+                        <span ng-show="trainerRegForm.nationality.$dirty && trainerRegForm.nationality.$error.required" class="help-block">Select your Country</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label> <br/>
+                        <textarea ng-model="address" id="address" name="address" placeholder="Provide your communication address here.." required></textarea>
+                        <span ng-show="trainerRegForm.address.$dirty && trainerRegForm.address.$untouched.required" class="help-block">Please provide your address</span>
+                    </div>
+                    <div class="form-group">
+                        <h4><u>Training You want to Give:</u></h4>
+                        <label for="subject">Web Technology:</label>
+                        <select ng-model="courseName" id="subject" ng-options="course for course in courses"> </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Date&Time">Date&Time:</label>
+                        <input type="datetime-local" ng-model="datetime" id="Date&Time" style="width:210px"/>
+
+                        <label for="Duration">Duration:</label>
+                        <input type="number" ng-model="duration" id="Duration" name="Date&Duration" maxlength="1" style="width:50px"/>Hrs.
+                    </div>
+                    <div class="form-group">
+                        <label for="qualification">Qualification:</label>
+                        <select class="form-control" id="qualification" name="qualification"  ng-model="qualification" ng-options="qlf for qlf in qualifications" style="width:210px" required> </select>
+                        <span ng-show="trainerRegForm.qualification.$dirty && trainerRegForm.qualification.$error.required" class="help-block">Select your Qualification</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="bankAccount">Bank Account Number:</label>
+                        <input type="password" name="bankAccount" ng-model="bankAccntNo" id="bankAccount" ng-maxlength="14" required/> <br/>
+                        <label for="bankAccount">Confirm Bank Account:</label>
+                        <input type="number" name="cnfBankAccount" ng-model="cnfrmBnkAccntNo" id="cnfBankAccount" ng-maxlength="14" required/>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" ng-model="regTrainer" class="btn btn-success">Register</button>
+                        <button type="reset" class="btn btn-warning">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--**** Creating Trainee REGISTRATION FORM ****-->
+<!--**** Creating MODAL ****-->
+<div class="container modal fade" id="traineeSignUpForm" role="dialog">
+    <div class="modal-dialog">
+        <!--**** Creating MODAL Content ****-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">If you want to train others. Register Here !</h3> <hr/><br/>
+                <form name="traineeRegForm" ng-submit="" role="form" id="traineeRegForm" novalidate>
+                    <div class="form-group">
+                        <label for="username">First Name:</label>
+                        <input type="text" class="form-control" name="traineeFirstName" id="traineeFirstName"  ng-model="traineeFirstName" required />
+                        <span ng-show="traineeRegForm.traineeFirstName.$dirty && traineeRegForm.traineeFirstName.$error.required" class="help-block">First Name should not be blank</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Last Name:</label>
+                        <input type="text" class="form-control" name="traineeLastName" id="traineeLastName"  ng-model="traineeLastName" required />
+                        <span ng-show="traineeRegForm.traineeLastName.$dirty && traineeRegForm.traineeLastName.$error.required" class="help-block">Last Name should not be blank</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <input type="radio" ng-model="traineeGender" name="male" value="male" />Male
+                        <input type="radio" ng-model="traineeGender" name="female" value="female" />Female
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" name="traineeAge" id="traineeAge" ng-model="traineeAge" required />
+                        <span ng-show="traineeRegForm.traineeAge.$dirty && traineeRegForm.traineeAge.$error.required" class="help-block">Enter your Age</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="nationality">Nationality:</label>
+                        <select class="form-control" id="traineeNationality" name="traineeNationality" ng-model="traineeNationality" ng-options="cntry for cntry in traineeCountries" required> </select>
+                        <span ng-show="traineeRegForm.traineeNationality.$dirty && traineeRegForm.traineeNationality.$error.required" class="help-block">Select your Country</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label> <br/>
+                        <textarea ng-model="traineeAddress" id="traineeAddress" name="traineeAddress" placeholder="Provide your communication address here.." required></textarea>
+                        <span ng-show="traineeRegForm.traineeAddress.$dirty && traineeRegForm.traineeAddress.$untouched.required" class="help-block">Please provide your address</span>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="qualification">Qualification:</label>
+                        <select class="form-control" id="traineeQual" name="traineeQual"  ng-model="traineeQual" ng-options="qlf for qlf in traineeQual" style="width:210px" required> </select>
+                        <span ng-show="traineeRegForm.traineeQual.$dirty && traineeRegForm.traineeQual.$error.required" class="help-block">Select your Qualification</span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" ng-model="regTrainee" class="btn btn-success">Register</button>
+                        <button type="reset" class="btn btn-warning">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--**** Adding content to main body of index.html file ****-->
+
+<div class="fluid mainBody" id="mainBodyContent">
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="images/logo3.webp" width="40%" height="30%" alt="Logo"/> <br/>
+           <label class="bodyText">
+               <h1>Build Skills. Work Smarter.</h1>
+           </label> <br/><br/><br/><br/>
+            <div class="btn-group btn-group-lg">
+                <button type="button" class="btn btn-info">Software Development</button>
+                <button type="button" class="btn btn-primary">IT Ops</button>
+                <button type="button" class="btn btn-success">Data</button>
+                <button type="button" class="btn btn-warning">Security</button>
+            </div> <br/><br/><br/><br/>
+            <div id="bodyText1">
+                Equip your team with information and cyber security best practices to <br/>
+                protect your business. Our courses and learning paths cover everything <br/>
+                from the fundamentals of security and security auditing to the latest in <br/>
+                digital forensics, ethical hacking, and malware analysis techniques.
+            </div> <br/><br/><br/>
+            <div class="container col-lg-pull-4">
+                <button type="button" class="btn btn-danger" style="width: 30%">Start a Free 10-day Trial</button>
+            </div>
+        </div>
+
+        <!--Right Side Content of Div-->
+        <div class="col-lg-6">
+            <label class="bodyText"> <br/><br/>
+                <a href="https://www.hackerearth.com/"> <img src="./images/logColl2.jpeg" /></a>
+            </label>
+        </div>
+    </div>
+<br/><br/><br/><br/><br/><br/>
+</div>
+
+<div class="fluid" id="iframeSection">
+    <div class="row">
+        <div class="col-lg-12">
+            <iframe src="http://www.bing.com" width="100%" height="300px" name="techSkills" scrolling="no" frameborder="1"></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="fluid mainBody">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-5">
+            <br/><br/><br/>
+            <h2>Don't just guess where your skills <br/> Stand - prove it.</h2> <br/><br/>
+            <button type="button" class="btn btn-primary" style="background-color: black">Get Your Skill IQ</button>
+        </div>
+        <div class="col-lg-6">
+            <img src="./images/hackersPic.jpeg"/>
+        </div>
+    </div>
+
+</div>
+
+<!--****Index page Footer****-->
+<div class="fluid" style="background-color: goldenrod">
+    <div class="row container"> <br/><br/><br/>
+        <div class="col-lg-2">
+            <label class="footerMenu">ABOUT</label> <br/><br/><br/>
+            <label class="footerMenu">CONTACT</label> <br/><br/><br/>
+            <label class="footerMenu">EVENTS</label> <br/><br/><br/>
+        </div>
+
+        <div class="col-lg-3">
+            <label class="footerMenu">SOLUTIONS</label> <br/><br/><br/>
+            <label class="footerSubMenu">Business</label><br/>
+            <label class="footerSubMenu">Individuals</label><br/>
+            <label class="footerSubMenu">Small Business</label><br/>
+            <label class="footerSubMenu">Academic</label><br/>
+            <label class="footerSubMenu">Federal Government</label><br/>
+            <label class="footerSubMenu">State and Local government</label><br/>
+            <label class="footerSubMenu">Free courses for Kids</label><br/>
+        </div>
+
+        <div class="col-lg-3">
+            <label class="footerMenu">PLATFORMS</label> <br/><br/><br/>
+            <label class="footerSubMenu">Browse Library</label><br/>
+            <label class="footerSubMenu">Hacker's IQ</label><br/>
+            <label class="footerSubMenu">Iris</label><br/>
+            <label class="footerSubMenu">Path</label><br/>
+            <label class="footerSubMenu">Mentoring</label><br/>
+            <label class="footerSubMenu">Authors</label><br/>
+            <label class="footerSubMenu">Mobile App</label><br/>
+            <label class="footerSubMenu">Professionals Services</label>
+        </div>
+
+        <div class="col-lg-2">
+            <label class="footerMenu">SUPPORT</label> <br/><br/><br/>
+            <label class="footerSubMenu">Help center</label><br/>
+            <label class="footerSubMenu">Knowledge Base</label><br/>
+            <label class="footerSubMenu">Integrations</label><br/>
+            <label class="footerSubMenu">IP Whitelist</label><br/>
+        </div>
+
+        <div class="col-lg-2">
+            <label class="footerMenu">COMPANY</label> <br/><br/><br/>
+            <label class="footerSubMenu">Partners</label><br/>
+            <label class="footerSubMenu">Hacker's Blog</label><br/>
+            <label class="footerSubMenu">Customer's story</label><br/>
+            <label class="footerSubMenu">Career</label><br/>
+            <label class="footerSubMenu">Technology</label><br/>
+            <label class="footerSubMenu">News Room</label><br/>
+            <label class="footerSubMenu">Affiliate program</label><br/>
+            <label class="footerSubMenu">Subscribe</label><br/>
+            <label class="footerSubMenu">Reverse Engineering</label> <br/>
+            <label class="footerSubMenu">Technology</label><br/>
+            <label class="footerSubMenu">News Room</label>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

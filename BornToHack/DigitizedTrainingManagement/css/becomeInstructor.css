@@ -1,0 +1,52 @@
+
+p.small {
+    font-variant: small-caps;
+    font-size: 1.900em;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+
+.courseVideo:hover {
+    -webkit-animation: tada 1s;
+    animation: tada 1s;
+}
+
+
+/* Style the header */
+
+#myDiv {
+
+    background-color: #66afe9;
+    background-image: url("../images/blue4.jpg");
+    padding: 150px;
+    text-align: center;
+}
+
+.acadmicourse {
+    background-color: lightgreen;
+
+    padding: 5px;
+    text-align: center;
+}

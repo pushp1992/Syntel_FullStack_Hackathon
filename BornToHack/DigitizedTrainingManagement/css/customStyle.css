@@ -1,0 +1,64 @@
+
+/*Stylesheet for Header*/
+#menuBar{
+background-color: #4b5257;
+}
+#courseBtn{
+    width: 130px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+#searchBox {
+    width: 270px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+#searchBox:focus{
+   width: 300px;
+}
+::-webkit-input-placeholder {
+    font-size: 11px;
+    color: #122b40;
+    text-transform: lowercase;
+    text-align: center;
+    font-weight: bold;
+}
+#instructor, #cart, #logoName{
+    color:#e7e7e7;
+}
+#userLogin, #userSignup{
+    width: 80px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+#bcmInstructor{
+    width: 150px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+.mainBody{
+    background-color: #080808;
+}
+.bodyText{
+    color: #f9f9f9;
+}
+#bodyText1{
+    color: #e3e3e3;
+    font-size: 17px;
+}
+#iframeSection{
+    background-color: #f9f9f9;
+}
+.footerMenu{
+    color: white;
+}

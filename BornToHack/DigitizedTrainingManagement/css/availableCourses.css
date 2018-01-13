@@ -1,0 +1,30 @@
+
+.courseVideo:hover {
+    -webkit-animation: tada 1s;
+    animation: tada 1s;
+}
+/* Style the header */
+.event, .header {
+    background-color: lightgrey;
+    padding: 20px;
+    text-align: center;
+}
+#techCourse {
+    background-color: lightblue;
+
+    padding: 5px;
+    text-align: center;
+}
+#foodCourse {
+    background-color: #A0522D;
+
+    padding: 5px;
+    text-align: center;
+}
+
+#acadmicourse {
+    background-color: lightgreen;
+
+    padding: 5px;
+    text-align: center;
+}
